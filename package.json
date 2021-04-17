@@ -1,0 +1,31 @@
+{
+  "name": "shecan-client",
+  "description": "Unofficial shecan client for MS Windows",
+  "version": "0.0.1",
+  "main": "app.js",
+  "license": "MIT",
+  "author": {
+    "name": "JayPY Code",
+    "email": "jaypy.code@gmail.com",
+    "url": "https://jaypy.ir"
+  },
+  "devDependencies": {
+    "electron": "^12.0.4",
+    "electron-builder": "^22.10.5"
+  },
+  "scripts": {
+    "run": "electron .",
+    "build": "electron-builder -w"
+  },
+  "build": {
+    "productName": "Shecan Client",
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "./src/logo.png",
+      "requestedExecutionLevel": "requireAdministrator"
+    }
+  }
+}

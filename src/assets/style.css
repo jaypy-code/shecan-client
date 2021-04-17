@@ -1,0 +1,86 @@
+* {
+    user-select: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+
+    background-color: white;
+    background-image: url("./images/night.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+body.active {
+    background-image: url("./images/day.jpg");
+}
+
+button {
+    position: fixed;
+    top: 80px;
+    right: 50%;
+
+    transform: translateX(50%);
+
+    cursor: pointer;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    border: none;
+
+    outline: none;
+
+    background-color: white;
+    background-image: url("./images/bubble-cloud.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.active button {
+    background-image: url("./images/cloud-fail.svg");
+}
+
+button:active {
+    transform: translateX(50%) scale(0.95) !important;
+}
+
+button:hover {
+    transform: translateX(50%) scale(1.05);
+}
+
+footer {
+    position: fixed;
+    bottom: 50px;
+    right: 50%;
+
+    transform: translateX(50%);
+
+    color: white;
+
+    text-align: center;
+}
+
+body.active footer {
+    color: black;
+}
+
+footer h4 {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: inherit;
+    font-size: 12px;
+}
